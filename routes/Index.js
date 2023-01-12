@@ -1,6 +1,5 @@
 const express = require('express')
 const router = express.Router()
-const request = require('request')
 const soap = require('soap')
 
 router.get('/consulta/:cep', function(req, res, next) {
