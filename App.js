@@ -1,12 +1,11 @@
-const createError = require('http-errors')
 const express = require('express')
-const path = require('path')
-const cookieParser = require('cookie-parser')
-const logger = require('morgan')
+const app = express()
+
+const port = process.env.PORT || 3000
 
 const indexRouter = require('./routes/Index')
-const usersRouter = require('./routes/Users')
 
-const app = express()
 app.use('/', indexRouter)
-app.listen(3000)
+app.listen(port, () => {
+    console.log(`Aplicação rodando em http://localhost:${port}`)
+})
